@@ -47,7 +47,9 @@ Other functions are fairly obvious, you have the following modes available:
 * extra large font `largeFontOn()` `largeFontOff()`
 * extra small font `smallFontOn()` `smallFontOff()`
 * upside-down text `upsideDownOn()` `upsideDownOff()`
-* barcodes in various formats
+* reset the printer, clears all modes `printerReset()`
+* print the default test page showing character sets, baud rate, temperature and firmware version `printerTest()`
+* barcodes in various formats 
 
 ## Printing barcodes
 
