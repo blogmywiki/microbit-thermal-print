@@ -29,7 +29,7 @@ Flash the Python code `thermal_print.py` on to your micro:bit using the [Mu edit
 
 ## How to use the code
 
-I've written functions to cover most text modes. Note that *mixing* text modes doesn't always work because I've had problems getting binary masking to work - that's something I hop to fix later. Each function just sends hex codes to the printer to enable or disable each mode.
+I've written functions to cover most text modes. Note that _mixing_ text modes doesn't always work because I've had problems getting binary masking to work - that's something I hope to fix later. Each function just sends hex codes to the printer to enable or disable each mode.
 
 The most important functions are `thermal_print("text")` and `thermal_print_ln("text")`
 
