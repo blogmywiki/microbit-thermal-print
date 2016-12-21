@@ -23,7 +23,7 @@ features may not work on your printer, you should check with its manual to see i
 
 The wiring diagram looks a bit like this:
 
-!(http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/microbit-thermal-print_bb2.png)
+![alt text](http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/microbit-thermal-print_bb2.png)
 
 ## To-do list
 * add options for barcode height and width
