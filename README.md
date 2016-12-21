@@ -55,11 +55,11 @@ Four common barcode formats are supported: UPC-A (American Univeral Product code
 
 ## Wireless printing
 
-You can also set up a printer to work wirelessly. 
+You can also set up a thermal printer to work wirelessly with the micro:bit. The `wireless_print_server.py` file polls for incoming radio messages and prints anything it receives. Messages need to be short I've found. You can put the `wireless_data_logger.py` file on another micro:bit which will then transmit data about its x, y and z accelerometer readings plus temperature and compass heading every 10 seconds. When you first run it you have to calibrate the compass by tilting the micro:bit to draw a circle.
 
 ## More information 
 
-See my [blog post] (http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-thermal/) for more background information and links to my other internet-connected thermal printing projects.
+See my [blog post] (http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-thermal/) for more background information and links to my other internet-connected thermal printing projects. I'd love to hear if you have ideas about how this can be used. I've made a box that prints random poems and Christmas cracker jokes - what can you think of?
 
 ## To-do list
 * add options for barcode height and width
