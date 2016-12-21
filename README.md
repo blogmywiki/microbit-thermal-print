@@ -25,6 +25,8 @@ The wiring diagram looks a bit like this:
 
 ![alt text](http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/microbit-thermal-print_bb2.png)
 
+Flash the Python code thermal_print.py on to your micro:bit using the [Mu editor](https://codewith.mu).
+
 ## To-do list
 * add options for barcode height and width
 * add line-spacing and print-density options
