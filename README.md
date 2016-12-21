@@ -1,7 +1,7 @@
 # microbit-thermal-print
 MicroPython code to print from a BBC micro:bit to a thermal till-roll printer
 
-(http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/thermal-demo.jpg)
+![alt text](http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/thermal-demo.jpg)
 
 ## Introduction
 A long time ago I made several printing gizmos with a Sparkfun thermal till-roll printer, driven by an Arduino or a 
