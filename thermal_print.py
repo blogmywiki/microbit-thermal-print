@@ -87,7 +87,7 @@ def barcodeHumanReadable():
 def barcodeNotHumanReadable():
     microbit.uart.write("\x1D\x48\x00")  # print no numbers
 
-def barcodeUPCA(num):
+def barcodeUPCA(num):                    # must be 12 digits long
     microbit.uart.write("\x1D\x6B\x00"+num+"\x00")
 
 def barcodeEAN13(num):
