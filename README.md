@@ -55,6 +55,12 @@ Other functions are fairly obvious, you have the following modes available:
 
 Four common barcode formats are supported: UPC-A (American Universal Product code, must be 12 digits), EAN-13 (common European product barcode), Code 128 and Code 93. The last two formats support alphanumeric characters, not just numbers. It's not possible at the moment to specify the height or width of the barcode (I'm working on this), but you can add or supress human-readable numbers below the barcode with the `barcodeHumanReadable()` and `barcodeNotHumanReadable()` functions.
 
+To print a 13-digit EAN barcode, for example, call the function with the text:
+`barcodeEAN13("9781477520826")`
+(This is the barcode from my book!)
+
+The other barcode functions are `barcodeUPCA()`, `barcode128()` and `barcode93()`
+
 ## Wireless printing
 
 You can also set up a thermal printer to work wirelessly with the micro:bit. The `wireless_print_server.py` file polls for incoming radio messages and prints anything it receives. Messages need to be short I've found. You can put the `wireless_data_logger.py` file on another micro:bit which will then transmit data about its x, y and z accelerometer readings plus temperature and compass heading every 10 seconds. When you first run it you have to calibrate the compass by tilting the micro:bit to draw a circle.
