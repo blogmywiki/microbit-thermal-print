@@ -4,10 +4,10 @@ MicroPython code to print from a BBC micro:bit to a thermal till-roll printer
 ![alt text](http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/thermal-demo.jpg)
 
 ## Introduction
-A long time ago I made several printing gizmos with a Sparkfun thermal till-roll printer, driven by an Arduino or a 
+A long time ago I made several printing gizmos (like [The Little Box of Poems](http://www.suppertime.co.uk/blogmywiki/little-box-of-poems/)) with a Sparkfun thermal till-roll printer, driven by an Arduino or a 
 Raspberry Pi. 
-I thought it might be fun to see if I could drive the printer using a humble BBC micro:bit and some Python, and by golly 
-you can.
+I thought it might be fun to see if you can drive the printer using a humble BBC micro:bit and some Python, and by golly 
+you can!
 
 ## How to build one
 
@@ -67,3 +67,4 @@ See my [blog post] (http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-ther
 * bitmap graphics and user-defined characters
 * get binary masking working to enable better mixing of modes
 * make a Python module out of the code
+* hello to Jason Isaacs
