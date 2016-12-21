@@ -53,7 +53,7 @@ Other functions are fairly obvious, you have the following modes available:
 
 ## Printing barcodes
 
-Four common barcode formats are supported: UPC-A (American Univeral Product code, must be 12 digits), EAN-13 (common European product barcode), Code 128 and Code 93. The last two formats support alphanumeric characters, not just numbers. It's not possible at the moment to specify the height or width of the barcode (I'm working on this), but you can add or supress human-readable numbers below the barcode with the `barcodeHumanReadable()` and `barcodeNotHumanReadable()` functions.
+Four common barcode formats are supported: UPC-A (American Universal Product code, must be 12 digits), EAN-13 (common European product barcode), Code 128 and Code 93. The last two formats support alphanumeric characters, not just numbers. It's not possible at the moment to specify the height or width of the barcode (I'm working on this), but you can add or supress human-readable numbers below the barcode with the `barcodeHumanReadable()` and `barcodeNotHumanReadable()` functions.
 
 ## Wireless printing
 
