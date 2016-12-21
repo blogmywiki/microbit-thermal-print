@@ -15,7 +15,7 @@ To get this working you will need:
 * a BBC micro:bit powered off batteries or a computer.
 * a Chinese thermal till-roll printer as sold by Pimoroni, Sparkfun, Adafruit etc.
 * a 5-9v 2A DC power supply for the printer.
-* some jumper leads and a breakout board like the Kitronik one.
+* some jumper leads and a micro:bit breakout board like the Kitronik one.
 * an old soap powder box or similar to mount the printer and micro:bit in.
 
 Please note that I have only tested this code with a printer I bought many years ago, firmware version 2.64 - some of the 
@@ -26,6 +26,32 @@ The wiring diagram looks a bit like this:
 ![alt text](http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/microbit-thermal-print_bb2.png)
 
 Flash the Python code thermal_print.py on to your micro:bit using the [Mu editor](https://codewith.mu).
+
+## How to use the code
+
+I've written functions to cover most text modes. Note that *mixing* text modes doesn't always work because I've had problems getting binary masking to work - that's something I hop to fix later. Each function just sends hex codes to the printer to enable or disable each mode.
+
+The most important functions are `thermal_print("text")` and `thermal_print_ln("text")`
+
+`thermal_print("text")` sends some text to the printer buffer but doesn't print it. It won't print anything until it receives a newline character `\n`. This function allows you to mix some different text modes on the same line.
+
+The more useful function is `thermal_print_ln("text")` which will print a line with anything inside the brackets - it must be a string, and you do not need to add the newline character, the function does this for you.
+
+Other functions are fairly obvious, you have the following modes available:
+* left, right, centre align
+* bold text
+* underline (hard-coded to a thick line)
+* inverse (white on black) text
+* double-width
+* double-height
+* extra large font
+* extra small font
+* upside-down text
+* barcodes in various formats
+
+## Printing barcodes
+
+Four common barcode formats are supported: UPC-A (American Univeral Product code, must be 12 digits), EAN-13 (common European product barcode), Code 128 and Code 93. The last two formats support alphanumeric characters, not just numbers. It's not possible at the moment to specify the height or width of the barcode (I'm working on this), but you can add or supress human-readable numbers below the barcode with the `barcodeHumanReadable()` and `barcodeNotHumanReadable()` functions.
 
 ## To-do list
 * add options for barcode height and width
