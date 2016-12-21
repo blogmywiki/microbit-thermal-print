@@ -1,4 +1,5 @@
 # this will print any radio messages received
+# by Giles Booth @blogmywiki
 
 from microbit import *
 import radio
