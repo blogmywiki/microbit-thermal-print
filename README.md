@@ -38,20 +38,28 @@ The most important functions are `thermal_print("text")` and `thermal_print_ln("
 The more useful function is `thermal_print_ln("text")` which will print a line with anything inside the brackets - it must be a string, and you do not need to add the newline character, the function does this for you.
 
 Other functions are fairly obvious, you have the following modes available:
-* left, right, centre align
-* bold text
-* underline (hard-coded to a thick line)
-* inverse (white on black) text
-* double-width
-* double-height
-* extra large font
-* extra small font
-* upside-down text
+* left, right, centre align `leftAlign()` `centreAlign()` `rightAlign()`
+* bold text `boldOn()` `boldOff()` 
+* underline (hard-coded to a thick line) `underlineOn()` `underlineOff()`
+* inverse (white on black) text `inverseOn()` `inverseOff()`
+* double-width `wideOn()` `wideOff()`
+* double-height `doubleHeightOn()` `doubleHeightOff()`
+* extra large font `largeFontOn()` `largeFontOff()`
+* extra small font `smallFontOn()` `smallFontOff()`
+* upside-down text `upsideDownOn()` `upsideDownOff()`
 * barcodes in various formats
 
 ## Printing barcodes
 
 Four common barcode formats are supported: UPC-A (American Univeral Product code, must be 12 digits), EAN-13 (common European product barcode), Code 128 and Code 93. The last two formats support alphanumeric characters, not just numbers. It's not possible at the moment to specify the height or width of the barcode (I'm working on this), but you can add or supress human-readable numbers below the barcode with the `barcodeHumanReadable()` and `barcodeNotHumanReadable()` functions.
+
+## Wireless printing
+
+You can also set up a printer to work wirelessly. 
+
+## More information 
+
+See my [blog post] (http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-thermal/) for more background information and links to my other internet-connected thermal printing projects.
 
 ## To-do list
 * add options for barcode height and width
