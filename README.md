@@ -99,7 +99,7 @@ You can also set up a thermal printer to work wirelessly with the micro:bit. The
 
 ## More information 
 
-See my [blog post] (http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-thermal/) for more background information and links to my other internet-connected thermal printing projects. I'd love to hear if you have ideas about how this can be used. I've made a box that prints random poems and Christmas cracker jokes - what can you think of?
+See my [blog post] (http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-thermal/) for more background information and links to my other internet-connected thermal printing projects. I'd love to hear if you have ideas about how this can be used. I've made a box that prints random poems and Christmas cracker jokes (`xmas-poems.py`) - what can you think of?
 
 ## To-do list
 * add options for barcode height and width
