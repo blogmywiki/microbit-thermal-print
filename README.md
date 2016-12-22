@@ -21,11 +21,11 @@ To get this working you will need:
 Please note that I have only tested this code with a printer I bought many years ago, firmware version 2.64 - some of the 
 features may not work on your printer, you should check with its manual to see if you need to alter any of the codes.
 
-The wiring diagram looks a bit like this:
+The wiring diagram looks like this:
 
 ![alt text](http://www.suppertime.co.uk/blogmywiki/wp-content/uploads/2016/12/microbit-thermal-print_bb2.png)
 
-Flash the Python code `thermal_print.py` on to your micro:bit using the [Mu editor](https://codewith.mu).
+Flash the Python code on to your micro:bit using the [Mu editor](https://codewith.mu).
 
 ## How to print
 
@@ -61,7 +61,7 @@ while True:
 
 I've written several functions to cover most text modes. These are all in `thermal_print.py`
 
-Note that _mixing_ text modes doesn't always work because I've had problems getting binary masking to work - that's something I hope to fix later. Each function just sends hex codes to the printer to enable or disable each mode.
+Note that __mixing__ text modes doesn't always work because I've had problems getting binary masking to work - that's something I hope to fix later. Each function just sends hex codes to the printer to enable or disable each mode.
 
 The most important functions are `thermal_print("text")` and `thermal_print_ln("text")`
 
