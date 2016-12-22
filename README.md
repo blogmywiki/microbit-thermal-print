@@ -27,9 +27,41 @@ The wiring diagram looks a bit like this:
 
 Flash the Python code `thermal_print.py` on to your micro:bit using the [Mu editor](https://codewith.mu).
 
-## How to use the code
+## How to print
 
-I've written functions to cover most text modes. Note that _mixing_ text modes doesn't always work because I've had problems getting binary masking to work - that's something I hope to fix later. Each function just sends hex codes to the printer to enable or disable each mode.
+At its simplest you can print text to the thermal printer with just a few lines of Python:
+
+```
+import microbit
+microbit.uart.init(baudrate=19200, bits=8, parity=None, stop=1, tx=microbit.pin8, rx=None)
+microbit.uart.write("Hello World\n")
+```
+
+The only parts of the `uart.init` command you can change are the baudrate (the speed data is sent to your printer) and the microbit pin number for data transmission (I use pin 8). I'm pretty sure most printers run at 19200 baud but you can check your printer's by holding down the paper feed button as you power it on. The newline `\n` character is needed to tell the printer to print the contents of its buffer.
+
+If you use this code you will also notice messages from the Python console on the printout. This is because when the program finishes running you still get messages from Python. This is actually quite useful for debugging - you get a hard copy of the error message rather than having to read scrolling text on the micro:bit display.
+
+You can have a bit more control - and avoid seeing messages from the console - by adding button presses:
+
+```
+import microbit
+microbit.uart.init(baudrate=19200, bits=8, parity=None, stop=1, tx=microbit.pin8, rx=None)
+
+while True:
+    if microbit.button_a.is_pressed() and microbit.button_b.is_pressed():
+        microbit.uart.write("both buttons pressed\n")
+    elif microbit.button_a.is_pressed():
+        microbit.uart.write("message A\n")
+    elif microbit.button_b.is_pressed():
+        microbit.uart.write("message B\n")
+    microbit.sleep(300)
+```
+
+## How to use my functions
+
+I've written several functions to cover most text modes. These are all in `thermal_print.py`
+
+Note that _mixing_ text modes doesn't always work because I've had problems getting binary masking to work - that's something I hope to fix later. Each function just sends hex codes to the printer to enable or disable each mode.
 
 The most important functions are `thermal_print("text")` and `thermal_print_ln("text")`
 
