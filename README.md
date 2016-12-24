@@ -34,7 +34,7 @@ At its simplest you can print text to the thermal printer with just a few lines 
 ```
 import microbit
 microbit.uart.init(baudrate=19200, bits=8, parity=None, stop=1, tx=microbit.pin8, rx=None)
-microbit.uart.write("Hello World\n")
+microbit.uart.write("Hello to Jason Isaacs\n")
 ```
 
 The only parts of the `uart.init` command you can change are the baudrate (the speed data is sent to your printer) and the microbit pin number for data transmission (I use pin 8). I'm pretty sure most printers run at 19200 baud but you can check your printer's by holding down the paper feed button as you power it on. The newline `\n` character is needed to tell the printer to print the contents of its buffer.
@@ -107,4 +107,3 @@ See my [blog post] (http://www.suppertime.co.uk/blogmywiki/2016/12/microbit-ther
 * bitmap graphics and user-defined characters
 * get binary masking working to enable better mixing of modes
 * make a Python module out of the code
-* hello to Jason Isaacs
